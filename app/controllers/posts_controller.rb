@@ -12,7 +12,7 @@ class PostsController < ApplicationController
      else 
       render action: 'new'
      end
-     
+
    end 
 
   def update
@@ -26,6 +26,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "Skasowano"
+    redirect_to posts_path
   end
 
   def edit
@@ -34,6 +38,11 @@ class PostsController < ApplicationController
 
   def index
      @posts = Post.all
+  end
+
+  def published
+    @posts = Post.where(published:true)
+    render action: "index"
   end
 
   def show
