@@ -12,8 +12,12 @@
  *
  *= require_tree .
  *= require_self
- */
+  */
  .field_with_errors input {
     border: 2px solid #cc4444;
+    font-style: oblique;
+
   }
-  
+  body {
+ color: #F06F3E
+  }

@@ -1,5 +1,12 @@
 <h3>Lista wpisów</h3>
- <p>  <%= link_to "Dodaj nowy wpis", new_post_path, class: "btn btn-success" %> </p>
+ <p>  <% if user_signed_in? %>
+  <%= link_to "Dodaj nowy wpis", new_post_path, class: "btn btn-success" %> </p>
+<% else %>
+<p class="lead">
+ Musisz się zalogować aby dodać wpis 
+ <%= link_to "Zaloguj sie", new_user_session_path %>
+ </p>
+ <% end %>
 <table class = "table table-striped">
 <thead>
 <tr> 
