@@ -1,1 +1,1 @@
-It's simple blog app
+It's simple blog app in Ruby on Rails
