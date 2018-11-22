@@ -2,6 +2,7 @@
  <p>  <% if user_signed_in? %>
   <%= link_to "Dodaj nowy wpis", new_post_path, class: "btn btn-success" %> </p>
 <% else %>
+ <%= link_to "Zarejestruj sie", new_user_registration_path %>
 <p class="lead">
  Musisz się zalogować aby dodać wpis 
  <%= link_to "Zaloguj sie", new_user_session_path %>
