@@ -2,22 +2,25 @@
  <p>  <% if user_signed_in? %>
   <%= link_to "Dodaj nowy wpis", new_post_path, class: "btn btn-success" %> </p>
 <% else %>
+  <%= link_to "Wyloguj sie", destroy_user_session_path %>
  <%= link_to "Zarejestruj sie", new_user_registration_path %>
 <p class="lead">
  Musisz się zalogować aby dodać wpis 
  <%= link_to "Zaloguj sie", new_user_session_path %>
  </p>
  <% end %>
+  <ul class="nav nav-tabs">
+  <li <% if params[:action] == "index" %>class="active"<% end %>><%= link_to "Wszystkie", posts_path %></li>
+  <li <% if params[:action] == "published" %>class="active"<% end %>><%= link_to "Opublikowane", published_posts_path %></li>
+</ul>
 <table class = "table table-striped">
 <thead>
 <tr> 
-    <th> # </th>
+    <th> ID</th>
     <th> Tytuł </th>
     <th> Autor </th>
     <th> Opublikowany? </th>
     <th> Treść </th>
-    <th> Akcje </th>
-
 </tr>
 </thead>
     <tbody>
