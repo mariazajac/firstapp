@@ -17,12 +17,122 @@
     border: 2px solid #cc4444;
     font-style: oblique;
 
+  
+    body {
+   color: white;
+   background-color: bisque;
+    }
+  
+  
+   img
+   { 
+     max-width: 900px;
+     height: auto;
+   }
+  
+   h6{
+    font-family: monospace;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 30px;
   }
-  body {
- color: #F06F3E
+  
+  h3{
+  margin-left: 10px;
+  
   }
- img 
- { 
-   width: 900px;
-   height: s; 
- }
+  
+  
+  
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
+  
+  
+  
+  
+  p.tekst{
+    text-align: justify;
+    margin-top:30px;
+    margin-left:30px;
+    margin-bottom:80px;
+  }
+  
+  hr.style-seven {
+      overflow: visible; 
+      height: 80px;
+      border-style: solid;
+      border-color: powderblue;
+      border-width: 4px 0 0 0;
+      border-radius: 40px;
+      margin-bottom: -40px;
+  }
+  hr.style-seven:before { 
+      display: block;
+      content: "";
+      height: 100px;
+      margin-top: -100px;
+      border-style: solid;
+      border-color: lightblue;
+      border-width: 0 0 4px 0;
+      border-radius: 80px;
+  }
+  
+  .container {
+      position: relative;
+      width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .srodek {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .srodek {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: beige;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  
+  .column {
+    
+    float: left;
+    padding: 10px;
+  }
+  .left{
+     width:25%;
+  }
+  .right {
+     width:75%;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
