@@ -26,7 +26,7 @@
   
    img
    { 
-     max-width: 900px;
+     max-width: 100px;
      height: auto;
    }
   
@@ -61,6 +61,22 @@
     margin-bottom:80px;
   }
   
+
+  hr.style15 {
+    border-top: 4px double #8c8b8b;
+    text-align: center;
+  }
+  hr.style15:after {
+    content: '\002665';
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #8c8b8b;
+    font-size: 18px;
+  }
+
   hr.style-seven {
       overflow: visible; 
       height: 80px;
@@ -68,7 +84,7 @@
       border-color: powderblue;
       border-width: 4px 0 0 0;
       border-radius: 40px;
-      margin-bottom: -40px;
+     
   }
   hr.style-seven:before { 
       display: block;
@@ -128,11 +144,13 @@
   .left{
      width:25%;
   }
-  .right {
-     width:75%;
-  }
+  
   .row:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .right {
+    width: 50%;
   }

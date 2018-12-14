@@ -1,6 +1,14 @@
-<h3> <%= @post.title %> </h3>
 
-<%= simple_format @post.body %>
+<h6 align=left size=20px> <%= @post.title %> </h6>
+
+
+<hr class="style-seven"></hr>
+
+
+<%=image_tag("galaxy.jpg", alt: "Logo", class: "center", :style => "height:100px")  %>
+
+
+<p class="tekst"><%= simple_format @post.body %></p>
  
   <p> <%= post_footer(@post) %> </p>
 

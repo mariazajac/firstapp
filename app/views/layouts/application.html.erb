@@ -20,8 +20,9 @@
  <a href="/" > <img src="https://i.imgur.com/SXrc3pS.png" alt="logo"> </a>
       <%= yield %>  
       <% if user_signed_in? %>
-       <p> <% link_to "Wyloguj sie", destroy_user_session_path, method: :delate %>
-       <% end %>
+      <p> <%= link_to "Wyloguj sie", destroy_user_session_path, method: :delete %></p>
+      <% end %>
+   
        </div>    
   </body>
 </html>
